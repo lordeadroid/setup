@@ -1,3 +1,17 @@
-URL="https://raw.githubusercontent.com/lordeadroid/setup/main/nodejs/.gitignore"
+BASE="https://raw.githubusercontent.com/lordeadroid/setup/main/nodejs"
 
-curl -O $URL
+FILES=(
+  .eslintignore
+  .eslintrc.js
+  .gitignore
+  .nycrc.json
+  pre-commit
+  setup.sh
+  todo.yml
+)
+
+for FILE in $FILES
+do
+  URL=$BASE/$FILE
+  curl -O $URL
+done
