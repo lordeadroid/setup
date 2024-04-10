@@ -12,9 +12,9 @@ FILES=(
 
 for FILE in $FILES
 do
+  echo "adding $FILE"
   URL=$BASE/$FILE
   curl -sO $URL
-  echo "added $FILE"
 done
 
 echo "initializing git"
