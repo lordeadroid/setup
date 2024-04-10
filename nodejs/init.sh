@@ -13,7 +13,7 @@ FILES=(
 for FILE in $FILES
 do
   URL=$BASE/$FILE
-  curl -O $URL
+  curl -sO $URL
 done
 
 git init
@@ -23,10 +23,10 @@ mv pre-commit .git-hooks/
 mkdir -p .github/workflows
 mv workflow.yml .github/workflows/
 
+touch main.js
 npm init -y
-npm install --save-dev eslint
-npm install --save-dev nyc
+npm install -sD eslint
+npm install -sD nyc
 
 mkdir bin
 mv setup.sh bin/
-sh bin/setup.sh
