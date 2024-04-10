@@ -30,3 +30,4 @@ npm install -sD nyc
 
 mkdir bin
 mv setup.sh bin/
+sh bin/setup.sh
