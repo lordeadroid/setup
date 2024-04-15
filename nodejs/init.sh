@@ -32,6 +32,7 @@ echo "initializing npm"
 npm init -y
 npm install -sD eslint
 npm install -sD c8
+npm pkg set type="module"
 npm pkg delete scripts.test
 npm pkg set scripts.coverage="npx c8 npm test"
 npm pkg set scripts.lint="eslint ."
