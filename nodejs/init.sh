@@ -2,9 +2,9 @@ BASE="https://raw.githubusercontent.com/lordeadroid/setup/main/nodejs"
 
 FILES=(
   .eslintignore
-  .eslintrc.js
   .gitignore
   .nycrc.json
+  eslint.config.js
   pre-commit
   setup.sh
   workflow.yml
