@@ -3,7 +3,7 @@ BASE="https://raw.githubusercontent.com/lordeadroid/setup/main/nodejs"
 FILES=(
   .eslintignore
   .gitignore
-  .nycrc.json
+  .c8rc.json
   eslint.config.js
   pre-commit
   setup.sh
@@ -31,9 +31,9 @@ touch main.js
 echo "initializing npm"
 npm init -y
 npm install -sD eslint
-npm install -sD nyc
+npm install -sD c8
 npm pkg set scripts.start="node main.js"
-npm pkg set scripts.coverage="npx nyc node --test"
+npm pkg set scripts.coverage="npx c8 npm test"
 npm pkg set scripts.lint="eslint ."
 npm pkg set scripts.test="node --test"
 
