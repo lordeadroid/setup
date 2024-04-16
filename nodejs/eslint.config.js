@@ -1,6 +1,10 @@
+import js from "@eslint/js";
+
 export default [
+  js.configs.recommended,
   {
     ignores: ["**/*.js", "**/*.json"],
+
     rules: {
       semi: ["error"],
       "arrow-parens": ["error", "always"],
