@@ -35,6 +35,7 @@ npm install -sD c8
 npm pkg set type="module"
 npm pkg delete scripts.test
 npm pkg set scripts.coverage="npx c8 npm test"
+npm pkg set scripts.dev="node --watch main.js"
 npm pkg set scripts.lint="eslint ."
 npm pkg set scripts.setup="sh ./bin/setup.sh"
 npm pkg set scripts.start="node main.js"
